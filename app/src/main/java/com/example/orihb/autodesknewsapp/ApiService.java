@@ -17,7 +17,6 @@ public interface ApiService {
     @GET("top-headlines?country=us&apiKey=394973a182a744e0ae10cc8f3a32b71d")
     Call<List<TopHeadlinesResponse>> getTopHeadlines(String apiKey);
 
-
 //    curl https://newsapi.org/v2/top-headlines -G \
 //            -d country=us \
 //            -d apiKey=394973a182a744e0ae10cc8f3a32b71d

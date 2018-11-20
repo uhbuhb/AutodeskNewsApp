@@ -7,6 +7,7 @@ INJECTED from /Users/urielhb/Documents/interview projects/autodeskApp/app/src/ma
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/e72973ac8a12374bd14927bf70691fe1/AndroidManifest.xml:2:1-11:12
 MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/a1d2e4a2d8743dd71e6005aad5022eeb/AndroidManifest.xml:17:1-30:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/9c33e58deb153568dc74e047b2d2114d/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/c01e6ce797eb2999bba41768da11b816/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/116a5dc707d20d0a07284c9145132764/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/21fb1e8f0e1d86a2e518fbb3ef5a4f40/AndroidManifest.xml:17:1-22:12
@@ -97,6 +98,8 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/urie
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/e72973ac8a12374bd14927bf70691fe1/AndroidManifest.xml:5:5-7:41
 MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/a1d2e4a2d8743dd71e6005aad5022eeb/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/a1d2e4a2d8743dd71e6005aad5022eeb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/9c33e58deb153568dc74e047b2d2114d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/9c33e58deb153568dc74e047b2d2114d/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/c01e6ce797eb2999bba41768da11b816/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/c01e6ce797eb2999bba41768da11b816/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/urielhb/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/116a5dc707d20d0a07284c9145132764/AndroidManifest.xml:20:5-44

@@ -68,12 +68,12 @@
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_light.xml.flat",
@@ -152,12 +152,12 @@
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -276,12 +276,12 @@
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
-        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
+        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -404,12 +404,12 @@
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_icon.xml.flat",
-        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/layout/abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/662529fa64098da3a0849ecd8dae1517/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_icon.xml.flat",
+        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -440,12 +440,12 @@
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_material.xml.flat",
-        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/layout/abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_material.xml.flat",
+        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -624,12 +624,12 @@
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -660,12 +660,12 @@
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-mdpi-v4/abc_list_focused_holo.9.png"
     },
     {
-        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
@@ -830,6 +830,10 @@
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/urielhb/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/39d6b280e26d8fde49c0852925cacb79/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/layout_view_holder_news_titles.xml.flat",
+        "source": "/Users/urielhb/Documents/interview projects/autodeskApp/app/src/main/res/layout/view_holder_news_titles.xml"
     },
     {
         "merged": "/Users/urielhb/Documents/interview projects/autodeskApp/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",

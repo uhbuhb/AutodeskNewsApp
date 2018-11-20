@@ -3,7 +3,7 @@ package com.example.orihb.autodesknewsapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.orihb.autodesknewsapp.ui.main.MainFragment;
+import com.example.orihb.autodesknewsapp.ui.main.fragment.NewsTitlesFragment;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, NewsTitlesFragment.newInstance())
                     .commitNow();
         }
 
@@ -32,5 +32,10 @@ public class MainActivity extends AppCompatActivity {
         apiService = retrofit.create(ApiService.class);
 
     }
+
+    public ApiService getApiService() {
+        return apiService;
+    }
+
 }
 
