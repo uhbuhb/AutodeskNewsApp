@@ -744,6 +744,10 @@ id message
 id middle
 id multiply
 id never
+id news_titles_fragment_titles_recyclerview
+id news_titles_viewholder_date_published_textview
+id news_titles_viewholder_imageview
+id news_titles_viewholder_title_textview
 id none
 id normal
 id notification_background
@@ -843,7 +847,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout main_activity
-layout main_fragment
+layout news_title_view_holder
+layout news_titles_fragment
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -854,7 +859,6 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-layout view_holder_news_titles
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

@@ -1,25 +1,23 @@
 package com.example.orihb.autodesknewsapp;
-import com.example.orihb.autodesknewsapp.ui.main.model.TopHeadlinesResponse;
+import com.example.orihb.autodesknewsapp.model.TopHeadlinesResponse;
 
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.Path;
-import retrofit2.http.Query;
+import retrofit2.http.Headers;
 
 
 public interface ApiService {
 
-    @GET("top-headlines?country=us&apiKey=394973a182a744e0ae10cc8f3a32b71d")
-    Call<List<TopHeadlinesResponse>> getTopHeadlines(String apiKey);
+    //@Headers("X-Api-Key: 394973a182a744e0ae10cc8f3a32b71d")
+    @GET("top-headlines?country=us")
+    Call<TopHeadlinesResponse> getTopHeadlines();
 
-//    curl https://newsapi.org/v2/top-headlines -G \
-//            -d country=us \
-//            -d apiKey=394973a182a744e0ae10cc8f3a32b71d
+
+    @GET("https://api.ipify.org?format=json")
+    Call<ResponseBody> getTest();
 
 
 }
