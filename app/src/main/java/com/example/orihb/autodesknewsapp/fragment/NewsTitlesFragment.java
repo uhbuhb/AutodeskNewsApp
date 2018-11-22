@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import com.example.orihb.autodesknewsapp.ApiService;
 import com.example.orihb.autodesknewsapp.MainActivity;
 import com.example.orihb.autodesknewsapp.R;
+import com.example.orihb.autodesknewsapp.model.Article;
 import com.example.orihb.autodesknewsapp.model.MainViewModel;
 import com.example.orihb.autodesknewsapp.adapter.NewsTitlesRecyclerViewAdapter;
 import com.example.orihb.autodesknewsapp.model.TopHeadlinesResponse;
@@ -46,19 +47,7 @@ public class NewsTitlesFragment extends Fragment {
         getApiService();
         //getTest();
         getNewsItems();
-
         titlesRecyclerView = rootView.findViewById(R.id.news_titles_fragment_titles_recyclerview);
-
-        titlesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(titlesRecyclerView.getContext(),
-                LinearLayoutManager.VERTICAL);
-        titlesRecyclerView.addItemDecoration(dividerItemDecoration);
-        titlesRecyclerView.setItemAnimator(null);
-        //titlesRecyclerView.setHasFixedSize(true);
-        titlesAdapter = new NewsTitlesRecyclerViewAdapter(null);
-        titlesRecyclerView.setAdapter(titlesAdapter);
-
-
 
         return rootView;
     }
@@ -69,7 +58,8 @@ public class NewsTitlesFragment extends Fragment {
         {
             @Override
             public void onResponse(Call<TopHeadlinesResponse> call, Response<TopHeadlinesResponse> response) {
-                Log.i("oriApp","response: " + response);
+                setRecyclerView(response.body().getArticles());
+
             }
 
             @Override
@@ -77,6 +67,18 @@ public class NewsTitlesFragment extends Fragment {
                 Log.i("oriApp","failure");
             }
         });
+
+    }
+
+    private void setRecyclerView(List<Article> articles) {
+        titlesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(titlesRecyclerView.getContext(),
+                LinearLayoutManager.VERTICAL);
+        titlesRecyclerView.addItemDecoration(dividerItemDecoration);
+        titlesRecyclerView.setItemAnimator(null);
+        //titlesRecyclerView.setHasFixedSize(true);
+        titlesAdapter = new NewsTitlesRecyclerViewAdapter(articles);
+        titlesRecyclerView.setAdapter(titlesAdapter);
 
     }
 

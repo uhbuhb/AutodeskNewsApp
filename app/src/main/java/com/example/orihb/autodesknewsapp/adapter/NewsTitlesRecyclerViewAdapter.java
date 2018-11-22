@@ -11,15 +11,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.orihb.autodesknewsapp.R;
+import com.example.orihb.autodesknewsapp.model.Article;
 import com.example.orihb.autodesknewsapp.model.TopHeadlinesResponse;
 
 import java.util.List;
 
 public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitlesRecyclerViewAdapter.NewsArticleTitleViewHolder> {
 
-    private List<TopHeadlinesResponse> newsArticles;
+    private List<Article> newsArticles;
 
-    public NewsTitlesRecyclerViewAdapter(List<TopHeadlinesResponse> articles){
+    public NewsTitlesRecyclerViewAdapter(List<Article> articles){
         this.newsArticles = articles;
 
     }
@@ -35,19 +36,26 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
     @Override
     public void onBindViewHolder(@NonNull NewsArticleTitleViewHolder newsArticleTitleViewHolder, int i) {
         newsArticleTitleViewHolder.bind(i, newsArticles.get(i));
+//        Article article = newsArticles.get(i);
+//        newsArticleTitleViewHolder.newsArticle = article;
+//        newsArticleTitleViewHolder.position = i;
+//        newsArticleTitleViewHolder.titleTextView.setText(article.getTitle());
+//        newsArticleTitleViewHolder.datePublishedTextView.setText(article.getPublishedAt());
+        //newsArticleTitleViewHolder.articleImageView.setImageURI(Uri.parse(article.getUrlToImage()));
+
     }
 
 
     @Override
     public int getItemCount() {
-        return 0; //this.newsArticles.size();
+        return this.newsArticles.size();
     }
 
     public class NewsArticleTitleViewHolder extends RecyclerView.ViewHolder {
         private final TextView titleTextView;
         private final TextView datePublishedTextView;
         private final ImageView articleImageView;
-        private TopHeadlinesResponse newsArticle;
+        private Article newsArticle;
         private int position;
 
         public NewsArticleTitleViewHolder(@NonNull View itemView) {
@@ -58,12 +66,12 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
 
         }
 
-        public void bind(int position, TopHeadlinesResponse topHeadlinesResponse) {
-            this.newsArticle = topHeadlinesResponse;
+        public void bind(int position, Article article) {
+            this.newsArticle = article;
             this.position = position;
-//            this.titleTextView.setText(newsArticle.getTitle());
-//            this.datePublishedTextView.setText(newsArticle.getPublishedAt());
-//            this.articleImageView.setImageURI(Uri.parse(newsArticle.getUrlToImage()));
+            this.titleTextView.setText(newsArticle.getTitle());
+            this.datePublishedTextView.setText(newsArticle.getPublishedAt());
+            //this.articleImageView.setImageURI(Uri.parse(newsArticle.getUrlToImage()));
 
         }
 

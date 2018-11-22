@@ -1,4 +1,0 @@
-#Tue Nov 20 13:30:03 IST 2018
-base.0=/Users/urielhb/Documents/autodeskApp/app/build/intermediates/transforms/dexMerger/debug/4
-path.0=classes.dex
-renamed.0=classes.dex
