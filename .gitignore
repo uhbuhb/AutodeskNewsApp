@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io/api/osx,androidstudio
 # Edit at https://www.gitignore.io/?templates=osx,androidstudio
 
+app/build/
 *.iml
 .gradle
 /local.properties
