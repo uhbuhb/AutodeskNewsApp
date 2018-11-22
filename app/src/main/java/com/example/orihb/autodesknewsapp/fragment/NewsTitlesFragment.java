@@ -23,6 +23,8 @@ import com.example.orihb.autodesknewsapp.model.TopHeadlinesResponse;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,10 +35,17 @@ public class NewsTitlesFragment extends Fragment {
     private MainViewModel mViewModel;
     private RecyclerView titlesRecyclerView;
     private NewsTitlesRecyclerViewAdapter titlesAdapter;
-    private ApiService apiService;
+    @Inject
+    ApiService apiService;
 
     public static NewsTitlesFragment newInstance() {
         return new NewsTitlesFragment();
+    }
+
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Nullable
@@ -44,7 +53,7 @@ public class NewsTitlesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.news_titles_fragment, container, false);
-        getApiService();
+        //getApiService();
         //getTest();
         getNewsItems();
         titlesRecyclerView = rootView.findViewById(R.id.news_titles_fragment_titles_recyclerview);
@@ -100,7 +109,7 @@ public class NewsTitlesFragment extends Fragment {
 
     private void getApiService(){
         MainActivity activity = (MainActivity) getActivity();
-        apiService = activity.getApiService();
+        //apiService = activity.getApiService();
 
     }
 
