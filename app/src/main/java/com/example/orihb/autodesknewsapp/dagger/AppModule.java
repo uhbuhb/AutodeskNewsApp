@@ -5,19 +5,20 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
+
 @Module
 public class AppModule {
 
-    Application mApplication;
+    Application application;
 
     public AppModule(Application application) {
-        mApplication = application;
+        this.application = application;
     }
 
     @Provides
     @Singleton
     Application providesApplication() {
-        return mApplication;
+        return application;
     }
 
 

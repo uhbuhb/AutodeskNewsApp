@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.example.orihb.autodesknewsapp.ApiService;
 import com.example.orihb.autodesknewsapp.MainActivity;
+import com.example.orihb.autodesknewsapp.NewsApp;
 import com.example.orihb.autodesknewsapp.R;
 import com.example.orihb.autodesknewsapp.model.Article;
 import com.example.orihb.autodesknewsapp.model.MainViewModel;
@@ -46,6 +47,7 @@ public class NewsTitlesFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((NewsApp) getActivity().getApplication()).getNetComponent().inject(this);
     }
 
     @Nullable
