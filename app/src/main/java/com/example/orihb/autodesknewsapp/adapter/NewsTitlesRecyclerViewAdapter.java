@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.orihb.autodesknewsapp.R;
+import com.example.orihb.autodesknewsapp.impl.ArticleInteraction;
 import com.example.orihb.autodesknewsapp.model.Article;
 import com.example.orihb.autodesknewsapp.model.TopHeadlinesResponse;
 
@@ -20,15 +21,23 @@ import java.util.List;
 public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitlesRecyclerViewAdapter.NewsArticleTitleViewHolder> {
 
     private List<Article> newsArticles;
+    private ArticleInteraction delegate;
 
-    public NewsTitlesRecyclerViewAdapter(List<Article> articles){
+    public NewsTitlesRecyclerViewAdapter(List<Article> articles, ArticleInteraction delegate){
         this.newsArticles = articles;
+        this.delegate = delegate;
     }
 
 
     @Override
-    public NewsArticleTitleViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public NewsArticleTitleViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, final int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.news_title_view_holder, viewGroup, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                delegate.onArticleClicked(i);
+            }
+        });
         NewsArticleTitleViewHolder viewHolder = new NewsArticleTitleViewHolder(view);
         return viewHolder;
     }
