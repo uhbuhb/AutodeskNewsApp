@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.orihb.autodesknewsapp.R;
 import com.example.orihb.autodesknewsapp.model.Article;
 import com.example.orihb.autodesknewsapp.model.TopHeadlinesResponse;
@@ -22,7 +23,6 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
 
     public NewsTitlesRecyclerViewAdapter(List<Article> articles){
         this.newsArticles = articles;
-
     }
 
 
@@ -36,13 +36,6 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
     @Override
     public void onBindViewHolder(@NonNull NewsArticleTitleViewHolder newsArticleTitleViewHolder, int i) {
         newsArticleTitleViewHolder.bind(i, newsArticles.get(i));
-//        Article article = newsArticles.get(i);
-//        newsArticleTitleViewHolder.newsArticle = article;
-//        newsArticleTitleViewHolder.position = i;
-//        newsArticleTitleViewHolder.titleTextView.setText(article.getTitle());
-//        newsArticleTitleViewHolder.datePublishedTextView.setText(article.getPublishedAt());
-        //newsArticleTitleViewHolder.articleImageView.setImageURI(Uri.parse(article.getUrlToImage()));
-
     }
 
 
@@ -71,7 +64,9 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
             this.position = position;
             this.titleTextView.setText(newsArticle.getTitle());
             this.datePublishedTextView.setText(newsArticle.getPublishedAt());
-            //this.articleImageView.setImageURI(Uri.parse(newsArticle.getUrlToImage()));
+            Glide.with(titleTextView.getContext())
+                    .load(newsArticle.getUrlToImage())
+                    .into(this.articleImageView);
 
         }
 

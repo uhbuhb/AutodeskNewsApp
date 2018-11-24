@@ -22,7 +22,7 @@
 
     <ImageView
         android:id="@+id/news_titles_viewholder_imageview"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -31,7 +31,8 @@
         android:layout_marginRight="8dp"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
-        android:scaleType="center"
+        android:maxHeight="150dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

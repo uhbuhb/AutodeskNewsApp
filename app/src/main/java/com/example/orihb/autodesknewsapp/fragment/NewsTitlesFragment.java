@@ -69,7 +69,7 @@ public class NewsTitlesFragment extends Fragment {
         {
             @Override
             public void onResponse(Call<TopHeadlinesResponse> call, Response<TopHeadlinesResponse> response) {
-                setRecyclerView(response.body().getArticles());
+                fillRecyclerView(response.body().getArticles());
 
             }
 
@@ -81,7 +81,7 @@ public class NewsTitlesFragment extends Fragment {
 
     }
 
-    private void setRecyclerView(List<Article> articles) {
+    private void fillRecyclerView(List<Article> articles) {
         titlesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(titlesRecyclerView.getContext(),
                 LinearLayoutManager.VERTICAL);
