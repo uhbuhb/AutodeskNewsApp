@@ -70,6 +70,5 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
 
         }
 
-
     }
 }

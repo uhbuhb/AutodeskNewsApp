@@ -13,6 +13,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -38,7 +39,12 @@ public class NetModule {
     @Singleton
     OkHttpClient provideOkHttpClient() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
         builder.addInterceptor(new NewsAppInterceptor(apiKey));
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        builder.addInterceptor(loggingInterceptor);
+
         return builder.build();
     }
 
