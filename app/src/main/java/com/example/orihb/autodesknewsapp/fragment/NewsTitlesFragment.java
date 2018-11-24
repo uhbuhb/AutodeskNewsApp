@@ -101,11 +101,6 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
         // TODO: Use the ViewModel
     }
 
-    @Override
-    public void onArticleClicked(int i) {
-        Log.i("article clicked", "article clicked");
-        replaceFragment();
-    }
 
     private void getTest(){
         apiService.getTest().enqueue(new Callback<ResponseBody>() {
@@ -122,8 +117,16 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
 
     }
 
-    public void replaceFragment(){
-        ArticleFragment fragment = ArticleFragment.newInstance("1", "2");
+
+    @Override
+    public void onArticleClicked(String articleUrl) {
+        replaceFragment(articleUrl);
+
+    }
+
+
+    public void replaceFragment(String articleUrl){
+        ArticleFragment fragment = ArticleFragment.newInstance(articleUrl);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment);
@@ -132,6 +135,7 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
 
         transaction.commit();
     }
+
 
 
 }

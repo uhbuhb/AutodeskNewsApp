@@ -30,14 +30,8 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
 
 
     @Override
-    public NewsArticleTitleViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, final int i) {
+    public NewsArticleTitleViewHolder onCreateViewHolder(@NonNull final ViewGroup viewGroup, final int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.news_title_view_holder, viewGroup, false);
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                delegate.onArticleClicked(i);
-            }
-        });
         NewsArticleTitleViewHolder viewHolder = new NewsArticleTitleViewHolder(view);
         return viewHolder;
     }
@@ -62,6 +56,13 @@ public class NewsTitlesRecyclerViewAdapter extends RecyclerView.Adapter<NewsTitl
 
         public NewsArticleTitleViewHolder(@NonNull View itemView) {
             super(itemView);
+            View layout = itemView.findViewById(R.id.news_titles_viewholder_layout);
+            layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    delegate.onArticleClicked(newsArticle.getUrl());
+                }
+            });
             titleTextView = itemView.findViewById(R.id.news_titles_viewholder_title_textview);
             datePublishedTextView = itemView.findViewById(R.id.news_titles_viewholder_date_published_textview);
             articleImageView = itemView.findViewById(R.id.news_titles_viewholder_imageview);
