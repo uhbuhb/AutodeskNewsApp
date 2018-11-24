@@ -34,35 +34,11 @@ public class NetModule {
         return GsonConverterFactory.create();
     }
 
-//    @Provides
-//    @Singleton
-//    Interceptor provideHeaderInterceptor(){
-//        Interceptor interceptor = new Interceptor() {
-//            @Override
-//            public Response intercept(Chain chain) throws IOException {
-//                Request request = chain.request().newBuilder().addHeader("X-Api-key", apiKey).build();
-//                return chain.proceed(request);
-//            }
-//        };
-//
-//    }
-//
-//
-
-
     @Provides
     @Singleton
     OkHttpClient provideOkHttpClient() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
-
-        builder.addInterceptor(new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Request request = chain.request().newBuilder().addHeader("X-Api-key", apiKey).build();
-                return chain.proceed(request);
-            }
-        });
-
+        builder.addInterceptor(new NewsAppInterceptor(apiKey));
         return builder.build();
     }
 
@@ -72,7 +48,7 @@ public class NetModule {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(gson)
-                //.client(client)
+                .client(client)
                 .build();
         return retrofit;
     }

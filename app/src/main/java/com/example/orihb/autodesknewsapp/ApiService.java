@@ -11,8 +11,6 @@ import retrofit2.http.Headers;
 
 public interface ApiService {
 
-    @Headers("X-Api-Key: 394973a182a744e0ae10cc8f3a32b71d")
-    //@GET("top-headlines?country=us&apiKey=394973a182a744e0ae10cc8f3a32b71d")
     @GET("top-headlines?country=us")
     Call<TopHeadlinesResponse> getTopHeadlines();
 
