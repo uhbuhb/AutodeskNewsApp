@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.container, NewsTitlesFragment.newInstance())
                     .commitNow();
         }
-        //((NewsApp) getApplication()).getNetComponent().inject(this);
     }
 
 }
