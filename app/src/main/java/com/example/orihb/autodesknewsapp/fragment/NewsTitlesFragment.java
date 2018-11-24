@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.orihb.autodesknewsapp.ApiService;
-import com.example.orihb.autodesknewsapp.MainActivity;
 import com.example.orihb.autodesknewsapp.NewsApp;
 import com.example.orihb.autodesknewsapp.R;
 import com.example.orihb.autodesknewsapp.impl.ArticleInteraction;
@@ -35,7 +34,6 @@ import retrofit2.Response;
 
 public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
 
-    private MainViewModel mViewModel;
     private RecyclerView titlesRecyclerView;
     private NewsTitlesRecyclerViewAdapter titlesAdapter;
     @Inject
@@ -57,7 +55,6 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.news_titles_fragment, container, false);
-        //getTest();
         getNewsItems();
         titlesRecyclerView = rootView.findViewById(R.id.news_titles_fragment_titles_recyclerview);
 
@@ -82,6 +79,7 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
 
     }
 
+
     private void fillRecyclerView(List<Article> articles) {
         titlesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(titlesRecyclerView.getContext(),
@@ -90,30 +88,6 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
         titlesRecyclerView.setItemAnimator(null);
         titlesAdapter = new NewsTitlesRecyclerViewAdapter(articles, this);
         titlesRecyclerView.setAdapter(titlesAdapter);
-
-    }
-
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
-
-    private void getTest(){
-        apiService.getTest().enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.i("oriApp",response.toString());
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Log.i("oriApp","failure");
-            }
-        });
 
     }
 
@@ -129,13 +103,17 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
         ArticleFragment fragment = ArticleFragment.newInstance(articleUrl);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, fragment);
+        transaction.replace(R.id.fragment_container, fragment);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.addToBackStack(null);
 
         transaction.commit();
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        getNewsItems();
+    }
 
 }

@@ -1,10 +1,12 @@
 package com.example.orihb.autodesknewsapp.fragment;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
@@ -51,6 +53,9 @@ public class ArticleFragment extends Fragment {
     }
 
     private void loadUrl() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
+        }
         webView.loadUrl(url);
         webView.setWebViewClient(new WebViewClient(){
             @Override
@@ -61,8 +66,6 @@ public class ArticleFragment extends Fragment {
 
             }
         });
-
-
 
     }
 
