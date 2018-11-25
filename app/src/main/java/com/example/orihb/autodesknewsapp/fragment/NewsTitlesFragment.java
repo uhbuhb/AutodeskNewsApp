@@ -1,6 +1,5 @@
 package com.example.orihb.autodesknewsapp.fragment;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,13 +12,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.example.orihb.autodesknewsapp.ApiService;
 import com.example.orihb.autodesknewsapp.NewsApp;
 import com.example.orihb.autodesknewsapp.R;
 import com.example.orihb.autodesknewsapp.impl.ArticleInteraction;
 import com.example.orihb.autodesknewsapp.model.Article;
-import com.example.orihb.autodesknewsapp.model.MainViewModel;
 import com.example.orihb.autodesknewsapp.adapter.NewsTitlesRecyclerViewAdapter;
 import com.example.orihb.autodesknewsapp.model.TopHeadlinesResponse;
 
@@ -27,7 +26,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -35,6 +33,7 @@ import retrofit2.Response;
 public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
 
     private RecyclerView titlesRecyclerView;
+    private ProgressBar progressBar;
     private NewsTitlesRecyclerViewAdapter titlesAdapter;
     @Inject
     ApiService apiService;
@@ -55,24 +54,31 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.news_titles_fragment, container, false);
-        getNewsItems();
         titlesRecyclerView = rootView.findViewById(R.id.news_titles_fragment_titles_recyclerview);
-
+        progressBar =  rootView.findViewById(R.id.news_titles_fragment_titles_progressBar);
+        getNewsItems();
         return rootView;
     }
 
 
     private void getNewsItems(){
+        progressBar.setVisibility(View.VISIBLE);
+        titlesRecyclerView.setVisibility(View.INVISIBLE);
         apiService.getTopHeadlines().enqueue(new Callback<TopHeadlinesResponse>()
         {
             @Override
             public void onResponse(Call<TopHeadlinesResponse> call, Response<TopHeadlinesResponse> response) {
-                fillRecyclerView(response.body().getArticles());
-
+                progressBar.setVisibility(View.INVISIBLE);
+                titlesRecyclerView.setVisibility(View.VISIBLE);
+                if (!isDetached() && isAdded()) {
+                    fillRecyclerView(response.body().getArticles());
+                }
             }
 
             @Override
             public void onFailure(Call<TopHeadlinesResponse> call, Throwable t) {
+                progressBar.setVisibility(View.INVISIBLE);
+                titlesRecyclerView.setVisibility(View.VISIBLE);
                 Log.i("oriApp","failure");
             }
         });
@@ -88,7 +94,6 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
         titlesRecyclerView.setItemAnimator(null);
         titlesAdapter = new NewsTitlesRecyclerViewAdapter(articles, this);
         titlesRecyclerView.setAdapter(titlesAdapter);
-
     }
 
 
@@ -104,9 +109,10 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragment);
+        transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                                        android.R.anim.fade_out );
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.addToBackStack(null);
-
         transaction.commit();
     }
 
@@ -116,4 +122,7 @@ public class NewsTitlesFragment extends Fragment implements ArticleInteraction {
         getNewsItems();
     }
 
+    public void onFragmentResume() {
+        getNewsItems();
+    }
 }

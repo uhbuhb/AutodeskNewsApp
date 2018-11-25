@@ -16,9 +16,7 @@ public class NewsApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         netComponent = DaggerNetComponent.builder()
-                //.appModule(new AppModule(this))
                 .netModule(new NetModule(API_BASE_URL, APIKEY))
                 .build();
 

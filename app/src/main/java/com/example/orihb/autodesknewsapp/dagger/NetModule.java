@@ -1,18 +1,10 @@
 package com.example.orihb.autodesknewsapp.dagger;
 
-
 import com.example.orihb.autodesknewsapp.ApiService;
-
-import java.io.IOException;
-
 import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -31,12 +23,6 @@ public class NetModule {
 
     @Provides
     @Singleton
-    GsonConverterFactory provideGson() {
-        return GsonConverterFactory.create();
-    }
-
-    @Provides
-    @Singleton
     OkHttpClient provideOkHttpClient() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
@@ -50,10 +36,10 @@ public class NetModule {
 
     @Provides
     @Singleton
-    Retrofit provideRetrofit(GsonConverterFactory gson, OkHttpClient client) {
+    Retrofit provideRetrofit(OkHttpClient client) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .addConverterFactory(gson)
+                .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
         return retrofit;

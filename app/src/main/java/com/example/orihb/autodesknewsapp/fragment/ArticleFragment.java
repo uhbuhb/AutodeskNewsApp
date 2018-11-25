@@ -60,14 +60,14 @@ public class ArticleFragment extends Fragment {
         webView.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                progressBar.setVisibility(View.INVISIBLE);
-                webView.setVisibility(View.VISIBLE);
-
+                if (!isDetached() && isAdded()) {
+                    super.onPageFinished(view, url);
+                    progressBar.setVisibility(View.INVISIBLE);
+                    webView.setVisibility(View.VISIBLE);
+                }
             }
         });
 
     }
-
 
 }
